@@ -1,0 +1,20 @@
+<div class="card"   style="margin-top: 20px;">
+
+  <div *ngIf="music">
+    <div class="card-header" >
+      <h3>Search Results</h3>
+    </div>
+  </div>
+  <div class="list-group">
+    <button class="list-group-item list-group-item-action rounded-0"
+            *ngFor="let doctor of doctors "
+            [ngClass]="{'active': doctor === selectedDoctor}"
+            (click)="doctorSelected(doctor?.doctorId )">{{doctor?.firstName}} {{doctor?.lastName}}
+
+    </button>
+  </div>
+
+
+</div>
+
+

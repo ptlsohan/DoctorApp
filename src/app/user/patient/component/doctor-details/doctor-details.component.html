@@ -1,0 +1,35 @@
+<div *ngIf="selectedDoctor" style="margin-top: 20px;">
+  <div class="card ">
+
+    <div class="card-body">
+      <table class="table table-borderless">
+        <tbody>
+        <tr>
+          <th >Doctor Id:</th>
+          <td>{{selectedDoctor?.doctorId}}</td>
+        </tr>
+        <tr>
+          <th >Track /Collection Name:</th>
+          <td>Dr. {{selectedDoctor?.firstName }} {{selectedDoctor?.lastName }}</td>
+        </tr>
+        <tr>
+          <th >Email Id</th>
+          <td>{{selectedDoctor?.emailId }}</td>
+        </tr>
+        <tr>
+          <th >Phone no.</th>
+          <td>{{selectedDoctor?.phoneNumber }}  </td>
+        </tr>
+        <tr>
+          <th>Specialities</th>
+          <!--<td ngFor="let speciality of {{selectedDoctor.specialities}}">{{speciality.name}}</td>-->
+        </tr>
+
+        </tbody>
+      </table>
+      <div id="flex-container">
+        <button type="button" class="btn btn-primary" (click)="detailRoute(selectedDoctor.doctorId)" style="margin-left: 10px;">More Detail</button>
+      </div>
+    </div>
+  </div>
+</div>

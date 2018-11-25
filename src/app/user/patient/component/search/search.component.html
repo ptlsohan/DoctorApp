@@ -1,0 +1,7 @@
+<div class="row justify-content-center">
+  <input class="form-control col-md-3 " type="text" placeholder="Location" aria-label="Location" #location >
+  <input class="form-control col-md-3 " type="text" placeholder="Speciality" aria-label="Speciality" #speciality >
+  <div class="input-group-append">
+    <button class="btn btn-dark  " (click)="getDoctor(location.value,speciality.value)">Search</button>
+  </div>
+</div>
